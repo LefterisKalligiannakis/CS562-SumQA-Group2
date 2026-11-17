@@ -20,6 +20,9 @@ PREFIXES = {
     "owl": "http://www.w3.org/2002/07/owl#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "foaf": "http://xmlns.com/foaf/0.1/",
+    "orkgr": "http://orkg.org/orkg/resource/",
+    "orkgc": "http://orkg.org/orkg/class/",
+    "orkgp": "http://orkg.org/orkg/predicate/",
     "ex": "http://example.org/ontology/",
     "exr": "http://example.org/resource/",
 }
@@ -62,14 +65,15 @@ PREFIX_DECL = re.compile(r"PREFIX\s+([A-Za-z0-9_-]*):\s*<([^>]*)>", re.I)
 FULL_IRI = re.compile(r"<(https?://[^>\s]+)>")
 PNAME = re.compile(r"(?<![\w<])([A-Za-z][\w-]*):([A-Za-z0-9_\-.%]*[A-Za-z0-9_%)]|\([^)\s]*\))")
 RESOURCE_NS = ("http://dbpedia.org/resource/", "https://dblp.org/pid/", "https://dblp.org/rec/",
-               "http://example.org/resource/")
+               "http://orkg.org/orkg/resource/", "http://example.org/resource/")
 
 
 def entities_in_query(sparql: str, resource_ns=RESOURCE_NS) -> list[str]:
     """Resource IRIs of a gold query (full IRIs and prefixed names). They are given to the
     model as oracle entity links, so that every setting uses the same entity linking."""
     prefixes = {p: ns for p, ns in PREFIX_DECL.findall(sparql)}
-    for p, ns in (("dbr", PREFIXES["dbr"]), ("res", PREFIXES["dbr"]), ("exr", PREFIXES["exr"])):
+    for p, ns in (("dbr", PREFIXES["dbr"]), ("res", PREFIXES["dbr"]), ("exr", PREFIXES["exr"]),
+                  ("orkgr", PREFIXES["orkgr"])):
         prefixes.setdefault(p, ns)
     body = PREFIX_DECL.sub(" ", sparql)
     out = []

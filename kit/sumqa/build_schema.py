@@ -33,6 +33,9 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--min-count", type=int, default=20)
     ap.add_argument("--lang", default="en")
+    ap.add_argument("--labels-store", default=None,
+                    help="an Oxigraph store (sumqa.kgstore) to read rdfs:label of classes and properties from; "
+                         "needed for KGs whose IRIs are opaque codes, such as the ORKG (orkgp:P31)")
     a = ap.parse_args()
 
     counts = json.load(open(a.counts))
@@ -41,7 +44,21 @@ def main():
         fmt = "nt" if f.endswith(".nt") else ("xml" if f.endswith((".owl", ".rdf")) else "turtle")
         g.parse(f, format=fmt)
 
+    store_labels = {}
+    if a.labels_store:
+        import pyoxigraph as ox
+        st = ox.Store.read_only(a.labels_store)
+        wanted = set(counts["classes"]) | set(counts["properties"])
+        for sol in st.query("SELECT ?x ?l WHERE { ?x <http://www.w3.org/2000/01/rdf-schema#label> ?l }"):
+            x, lab = sol[0], sol[1]
+            if x.value in wanted and x.value not in store_labels:
+                lang = getattr(lab, "language", None)
+                if lang in (None, a.lang):
+                    store_labels[x.value] = lab.value
+
     def label(x):
+        if str(x) in store_labels:
+            return store_labels[str(x)]
         best = None
         for lab in g.objects(x, RDFS.label):
             if getattr(lab, "language", None) in (a.lang, None):

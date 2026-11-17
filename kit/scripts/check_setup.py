@@ -1,7 +1,7 @@
 """Check that the Project B set-up is complete and write SETUP_REPORT.txt (commit it to your repository).
 
     python scripts/check_setup.py
-Uses $DBPEDIA_ENDPOINT, $DBLP_ENDPOINT and $OLLAMA_HOST (see SETUP.md).
+Uses $ORKG_ENDPOINT, $DBLP_ENDPOINT and $OLLAMA_HOST (see SETUP.md).
 """
 import json
 import os
@@ -34,7 +34,7 @@ for mod in ("rdflib", "pyoxigraph", "tiktoken", "pyspark"):
 
 from sumqa.sparql import SparqlClient  # noqa: E402
 
-for kg, env, probe in (("dbpedia2016", "DBPEDIA_ENDPOINT", "ASK { <http://dbpedia.org/resource/Heraklion> ?p ?o }"),
+for kg, env, probe in (("orkg2023", "ORKG_ENDPOINT", "ASK { ?s a <http://orkg.org/orkg/class/Paper> }"),
                        ("dblp2022", "DBLP_ENDPOINT", "ASK { ?s a <https://dblp.org/rdf/schema#Publication> }")):
     ep = os.environ.get(env)
     if not ep:
@@ -47,7 +47,7 @@ for kg, env, probe in (("dbpedia2016", "DBPEDIA_ENDPOINT", "ASK { <http://dbpedi
     sch = f"data/kg/{kg}/schema_elements.jsonl"
     check(f"{kg} schema elements", count(sch) > 50, f"{count(sch)} elements")
 
-for b in ("qald9plus_test", "lcquad1_test", "dblpquad_test"):
+for b in ("sciqa_test", "dblpquad_test"):
     n = count(f"data/benchmarks/{b}.gold.jsonl")
     check(f"gold answers {b}", n > 0, f"{n} questions kept ({count(f'data/benchmarks/{b}.dropped.jsonl')} dropped)")
 

@@ -2,10 +2,12 @@
 
     python -m sumqa.prepare_benchmarks --raw data/benchmarks/raw --out data/benchmarks
 
-Input (downloaded by scripts/download_benchmarks.sh):
+Input (SciQA: downloaded by get_data.py of the November 2026 data update; the others by
+scripts/download_benchmarks.sh):
+  sciqa/{train,valid,test}/questions.json  SciQA over the ORKG (CC BY 4.0, Zenodo 10.5281/zenodo.7744048)
   qald_9_plus_{train,test}_dbpedia.json   QALD-9-plus, DBpedia part (CC BY 4.0)
   lcquad1_{train,test}.json               LC-QuAD 1.0 (GPL-3.0)
-  dblp_quad/{train,valid,test}.json       DBLP-QuAD (CC BY 4.0), exported from Hugging Face
+  dblp_quad/{train,valid,test}.json       DBLP-QuAD (CC BY 4.0), downloaded from Zenodo
 Output, one file per benchmark and split:
   {"id", "benchmark", "kg", "question", "sparql", "entities"}
 "entities" are the resource IRIs of the gold query (oracle entity links, see README).
@@ -60,6 +62,30 @@ def dblpquad(path, name="dblpquad"):
                "question": text, "sparql": sparql.strip(), "entities": entities_in_query(sparql)}
 
 
+SCIQA_PREFIXES = ("PREFIX orkgr: <http://orkg.org/orkg/resource/>\n"
+                  "PREFIX orkgc: <http://orkg.org/orkg/class/>\n"
+                  "PREFIX orkgp: <http://orkg.org/orkg/predicate/>\n"
+                  "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
+                  "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
+                  "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n")
+
+
+def sciqa(path, name="sciqa"):
+    """SciQA questions.json: {"questions": [{"id", "question": {"string"}, "query": {"sparql"}, ...}]}.
+    The SciQA queries use orkgc:, orkgp:, orkgr: and rdfs: without PREFIX lines; they are added here."""
+    d = json.load(open(path, encoding="utf-8"))
+    for q in d["questions"] if isinstance(d, dict) else d:
+        text = _get(q, "question", "string") or q.get("question")
+        sparql = _get(q, "query", "sparql") or q.get("query")
+        if not isinstance(text, str) or not isinstance(sparql, str):
+            continue
+        sparql = sparql.strip()
+        if "PREFIX" not in sparql.upper()[:400]:
+            sparql = SCIQA_PREFIXES + sparql
+        yield {"id": f"{name}-{q.get('id')}", "benchmark": name, "kg": "orkg2023",
+               "question": text.strip(), "sparql": sparql, "entities": entities_in_query(sparql)}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--raw", default="data/benchmarks/raw")
@@ -70,6 +96,8 @@ def main():
                     help="DBLP-QuAD test has 2,000 questions; a fixed random sample keeps runs short")
     a = ap.parse_args()
     jobs = [
+        ("sciqa_train", sciqa, "sciqa/train/questions.json"),
+        ("sciqa_test", sciqa, "sciqa/test/questions.json"),
         ("qald9plus_train", qald, "qald_9_plus_train_dbpedia.json"),
         ("qald9plus_test", qald, "qald_9_plus_test_dbpedia.json"),
         ("lcquad1_train", lcquad1, "lcquad1_train.json"),
