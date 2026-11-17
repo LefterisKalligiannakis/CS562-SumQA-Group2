@@ -14,15 +14,16 @@ from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 
 RDF_TYPE = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-NT_REGEX = r'^\s*(<[^>]*>|_:\S+)\s+<([^>]*)>\s+(.*?)\s*\.\s*$'
-OBJ_LIT = r'^"((?:[^"\\]|\\.)*)"(?:@([A-Za-z0-9-]+)|\^\^<([^>]*)>)?$'
+NT_REGEX = r'^\s*(<[^>]*>|_:[^\s]+)\s+<([^>]*)>\s+(.+)\s*\.\s*$'
+# Possessive runs keep long literals from overflowing the Java regex stack.
+OBJ_LIT = r'^"([^"\\]*+(?:\\.[^"\\]*+)*+)"(?:@([A-Za-z0-9-]+)|\^\^<([^>]*)>)?$'
 
 
 def load_triples(spark, paths):
     lines = spark.read.text(paths).filter(~F.col("value").rlike(r"^\s*(#.*)?$"))
     x = lines.select(F.regexp_extract("value", NT_REGEX, 1).alias("s_raw"),
                      F.regexp_extract("value", NT_REGEX, 2).alias("p"),
-                     F.regexp_extract("value", NT_REGEX, 3).alias("o_raw")).filter(F.col("p") != "")
+                     F.trim(F.regexp_extract("value", NT_REGEX, 3)).alias("o_raw")).filter(F.col("p") != "")
     iri = F.col("o_raw").startswith("<")
     bn = F.col("o_raw").startswith("_:")
     lang = F.regexp_extract("o_raw", OBJ_LIT, 2)

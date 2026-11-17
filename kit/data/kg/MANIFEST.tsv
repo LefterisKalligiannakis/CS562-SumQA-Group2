@@ -1,0 +1,4 @@
+file	source	bytes	md5
+data/kg/orkg2023/raw/orkg-rdf-dump-2023-02-14.zip	https://zenodo.org/records/7744048/files/ORKG%20RDF%20dump%2014.02.2023.zip?download=1	10833310	ec4240d33906c44fd40bf3402f0ff20e
+data/benchmarks/raw/SciQA-dataset.zip	https://zenodo.org/records/7744048/files/SciQA-dataset.zip?download=1	553459	efe2c09d9affb0e3cb0202e645eb7a28
+data/kg/dblp2022/raw/dblp.nt.gz	https://zenodo.org/records/7638511/files/dblp.nt.gz?download=1	2779575399	8194e6e98fef690ba3d24afe488fa2d8

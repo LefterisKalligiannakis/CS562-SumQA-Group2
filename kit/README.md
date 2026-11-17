@@ -20,7 +20,7 @@ can be compared. The project description is `../CS562_ProjectB_2026.pdf`.
 | `sumqa/ablation.py` | Counterfactual ablation of context lines (RQ3) |
 | `sumqa/llm.py`, `sumqa/sparql.py`, `sumqa/cache.py` | Ollama / OpenAI-compatible / mock models, SPARQL client, disk caches |
 | `scripts/make_toy.py` | Toy KG, ontology and 12 questions (runs without a server) |
-| `scripts/download_benchmarks.sh` | Adds DBLP-QuAD from Hugging Face and converts all benchmarks |
+| `scripts/download_benchmarks.sh` | Adds DBLP-QuAD from its Zenodo archive and converts all benchmarks |
 | `scripts/download_kgs.sh` | DBpedia 2016-10 and dblp 2022-08 dumps (for summaries) |
 | `sumqa/kgstore.py` | Loads a KG into a local Oxigraph store (SPARQL without a server) |
 | `scripts/check_setup.py` | Checks the set-up and writes `SETUP_REPORT.txt` |

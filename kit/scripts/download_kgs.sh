@@ -3,34 +3,17 @@
 #   bash scripts/download_kgs.sh dbpedia     # about 1.1 GB compressed
 #   bash scripts/download_kgs.sh dblp        # about 2.8 GB compressed
 set -euo pipefail
-# Keep incomplete downloads separate so a later run does not skip them.
-download() {
-  local destination="$1" url="$2"
-  [ -s "$destination" ] && return 0
-  if curl -fL --connect-timeout 15 --retry 3 --retry-connrefused \
-      --retry-max-time 120 -o "$destination.part" "$url"; then
-    mv -- "$destination.part" "$destination"
-  else
-    echo "Download failed: $url" >&2
-    echo "Check your network/VPN or retry later. The download server may be unavailable." >&2
-    echo "For a mirror of the same release, set DBPEDIA_BASE_URL to its 2016-10 directory." >&2
-    return 1
-  fi
-}
-
 case "${1:-}" in
 dbpedia)
   # DBpedia 2016-10, the release used by QALD-9 (CC BY-SA 3.0 / GFDL). Files from
   # https://downloads.dbpedia.org/2016-10/core-i18n/en/ and the ontology from /2016-10/
   D=data/kg/dbpedia2016/raw; mkdir -p $D
-  R=${DBPEDIA_BASE_URL:-https://downloads.dbpedia.org/2016-10}
-  R=${R%/}
-  B=$R/core-i18n/en
+  B=https://downloads.dbpedia.org/2016-10/core-i18n/en
   for f in instance_types_en.ttl.bz2 instance_types_transitive_en.ttl.bz2 mappingbased_objects_en.ttl.bz2 \
            mappingbased_literals_en.ttl.bz2 labels_en.ttl.bz2 infobox_properties_en.ttl.bz2; do
-    download "$D/$f" "$B/$f"
+    [ -s $D/$f ] || curl -fL --retry 3 -o $D/$f $B/$f
   done
-  download "$D/dbpedia_2016-10.nt" "$R/dbpedia_2016-10.nt"
+  [ -s $D/dbpedia_2016-10.nt ] || curl -fL -o $D/dbpedia_2016-10.nt https://downloads.dbpedia.org/2016-10/dbpedia_2016-10.nt
   echo "next: python -m sumqa.kgstore --store data/kg/dbpedia2016/store $D/*.ttl.bz2 $D/dbpedia_2016-10.nt"
   echo "      python -m sumqa.kgstats --out data/kg/dbpedia2016/counts.json --parquet data/kg/dbpedia2016/parquet \"$D/*.ttl.bz2\""
   echo "      python -m sumqa.build_schema --ontology $D/dbpedia_2016-10.nt --counts data/kg/dbpedia2016/counts.json --out data/kg/dbpedia2016/schema_elements.jsonl"
