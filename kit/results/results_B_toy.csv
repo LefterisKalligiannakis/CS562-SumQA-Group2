@@ -1,0 +1,2 @@
+team,variant,context,benchmark,kg,budget,model,shots,token_counter,n,accuracy,macro_precision,macro_recall,macro_f1,mean_context_tokens,mean_prompt_tokens,n_correct,n_partial,n_wrong,n_empty,n_error,n_no_query
+B2,mysummary,summary,toy_test,toy,300,mock:gold,3,cl100k,12,1.0,1.0,1.0,1.0,86.0,,12,0,0,0,0,0
