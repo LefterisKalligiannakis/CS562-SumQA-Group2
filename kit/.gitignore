@@ -1,4 +1,3 @@
-runs/
 cache/
 results/*.csv
 !results/*_template.csv
