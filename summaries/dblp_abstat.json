@@ -1,0 +1,2094 @@
+{
+    "kg": "dblp2022",
+    "team": "B2",
+    "kind": "abstat",
+    "nodes": [
+        {
+            "id": "n1",
+            "classes": [],
+            "size": 15118894
+        },
+        {
+            "id": "n2",
+            "classes": [
+                "http://purl.org/spar/datacite/Identifier"
+            ],
+            "size": 557628
+        },
+        {
+            "id": "n3",
+            "classes": [
+                "http://purl.org/spar/datacite/PersonalIdentifier"
+            ],
+            "size": 3225541
+        },
+        {
+            "id": "n4",
+            "classes": [
+                "http://purl.org/spar/datacite/ResourceIdentifier"
+            ],
+            "size": 11855511
+        },
+        {
+            "id": "n5",
+            "classes": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+            ],
+            "size": 19694260
+        },
+        {
+            "id": "n6",
+            "classes": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "size": 57
+        },
+        {
+            "id": "n7",
+            "classes": [
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ],
+            "size": 15
+        },
+        {
+            "id": "n8",
+            "classes": [
+                "http://www.w3.org/2002/07/owl#SymmetricProperty"
+            ],
+            "size": 4
+        },
+        {
+            "id": "n9",
+            "classes": [
+                "http://www.w3.org/2002/07/owl#TransitiveProperty"
+            ],
+            "size": 1
+        },
+        {
+            "id": "n10",
+            "classes": [
+                "https://dblp.org/rdf/schema#AmbiguousCreator"
+            ],
+            "size": 11544
+        },
+        {
+            "id": "n11",
+            "classes": [
+                "https://dblp.org/rdf/schema#Article"
+            ],
+            "size": 2440347
+        },
+        {
+            "id": "n12",
+            "classes": [
+                "https://dblp.org/rdf/schema#Book"
+            ],
+            "size": 108223
+        },
+        {
+            "id": "n13",
+            "classes": [
+                "https://dblp.org/rdf/schema#Data"
+            ],
+            "size": 3347
+        },
+        {
+            "id": "n14",
+            "classes": [
+                "https://dblp.org/rdf/schema#Editorship"
+            ],
+            "size": 53967
+        },
+        {
+            "id": "n15",
+            "classes": [
+                "https://dblp.org/rdf/schema#Group"
+            ],
+            "size": 300
+        },
+        {
+            "id": "n16",
+            "classes": [
+                "https://dblp.org/rdf/schema#Incollection"
+            ],
+            "size": 41290
+        },
+        {
+            "id": "n17",
+            "classes": [
+                "https://dblp.org/rdf/schema#Informal"
+            ],
+            "size": 476780
+        },
+        {
+            "id": "n18",
+            "classes": [
+                "https://dblp.org/rdf/schema#Inproceedings"
+            ],
+            "size": 3074098
+        },
+        {
+            "id": "n19",
+            "classes": [
+                "https://dblp.org/rdf/schema#Person"
+            ],
+            "size": 3036888
+        },
+        {
+            "id": "n20",
+            "classes": [
+                "https://dblp.org/rdf/schema#Reference"
+            ],
+            "size": 27321
+        },
+        {
+            "id": "n21",
+            "classes": [
+                "https://dblp.org/rdf/schema#Withdrawn"
+            ],
+            "size": 5273
+        }
+    ],
+    "edges": [
+        {
+            "source": "n5",
+            "property": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+            "target": "n19",
+            "count": 18946002
+        },
+        {
+            "source": "n5",
+            "property": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+            "target": "n5",
+            "count": 13507982
+        },
+        {
+            "source": "n4",
+            "property": "http://purl.org/spar/datacite/usesIdentifierScheme",
+            "target": "n1",
+            "count": 11864736
+        },
+        {
+            "source": "n18",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n19",
+            "count": 9698722
+        },
+        {
+            "source": "n11",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n19",
+            "count": 7240880
+        },
+        {
+            "source": "n5",
+            "property": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+            "target": "n1",
+            "count": 6186278
+        },
+        {
+            "source": "n18",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n4",
+            "count": 5671354
+        },
+        {
+            "source": "n18",
+            "property": "http://www.w3.org/2002/07/owl#sameAs",
+            "target": "n1",
+            "count": 5277656
+        },
+        {
+            "source": "n18",
+            "property": "https://dblp.org/rdf/schema#doi",
+            "target": "n1",
+            "count": 5164408
+        },
+        {
+            "source": "n11",
+            "property": "http://www.w3.org/2002/07/owl#sameAs",
+            "target": "n1",
+            "count": 5034003
+        },
+        {
+            "source": "n11",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n4",
+            "count": 4775841
+        },
+        {
+            "source": "n11",
+            "property": "https://dblp.org/rdf/schema#doi",
+            "target": "n1",
+            "count": 4669658
+        },
+        {
+            "source": "n3",
+            "property": "http://purl.org/spar/datacite/usesIdentifierScheme",
+            "target": "n1",
+            "count": 3225547
+        },
+        {
+            "source": "n19",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n3",
+            "count": 3213699
+        },
+        {
+            "source": "n18",
+            "property": "https://dblp.org/rdf/schema#bibtexType",
+            "target": "n1",
+            "count": 3074098
+        },
+        {
+            "source": "n18",
+            "property": "https://dblp.org/rdf/schema#listedOnTocPage",
+            "target": "n1",
+            "count": 3074098
+        },
+        {
+            "source": "n18",
+            "property": "https://dblp.org/rdf/schema#publishedAsPartOf",
+            "target": "n14",
+            "count": 3073462
+        },
+        {
+            "source": "n18",
+            "property": "https://dblp.org/rdf/schema#orderedCreators",
+            "target": "n5",
+            "count": 3070635
+        },
+        {
+            "source": "n18",
+            "property": "https://dblp.org/rdf/schema#primaryElectronicEdition",
+            "target": "n1",
+            "count": 2898390
+        },
+        {
+            "source": "n11",
+            "property": "https://dblp.org/rdf/schema#bibtexType",
+            "target": "n1",
+            "count": 2440347
+        },
+        {
+            "source": "n11",
+            "property": "https://dblp.org/rdf/schema#listedOnTocPage",
+            "target": "n1",
+            "count": 2440344
+        },
+        {
+            "source": "n11",
+            "property": "https://dblp.org/rdf/schema#orderedCreators",
+            "target": "n5",
+            "count": 2428512
+        },
+        {
+            "source": "n11",
+            "property": "https://dblp.org/rdf/schema#primaryElectronicEdition",
+            "target": "n1",
+            "count": 2399709
+        },
+        {
+            "source": "n17",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n19",
+            "count": 1615727
+        },
+        {
+            "source": "n17",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n4",
+            "count": 925051
+        },
+        {
+            "source": "n5",
+            "property": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+            "target": "n10",
+            "count": 747403
+        },
+        {
+            "source": "n2",
+            "property": "http://purl.org/spar/datacite/usesIdentifierScheme",
+            "target": "n1",
+            "count": 557630
+        },
+        {
+            "source": "n18",
+            "property": "https://dblp.org/rdf/schema#otherElectronicEdition",
+            "target": "n1",
+            "count": 537555
+        },
+        {
+            "source": "n17",
+            "property": "https://dblp.org/rdf/schema#bibtexType",
+            "target": "n1",
+            "count": 476780
+        },
+        {
+            "source": "n17",
+            "property": "https://dblp.org/rdf/schema#orderedCreators",
+            "target": "n5",
+            "count": 476751
+        },
+        {
+            "source": "n17",
+            "property": "https://dblp.org/rdf/schema#listedOnTocPage",
+            "target": "n1",
+            "count": 476200
+        },
+        {
+            "source": "n17",
+            "property": "https://dblp.org/rdf/schema#primaryElectronicEdition",
+            "target": "n1",
+            "count": 475742
+        },
+        {
+            "source": "n11",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n2",
+            "count": 364249
+        },
+        {
+            "source": "n11",
+            "property": "https://dblp.org/rdf/schema#wikidata",
+            "target": "n1",
+            "count": 364247
+        },
+        {
+            "source": "n18",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n10",
+            "count": 352429
+        },
+        {
+            "source": "n11",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n10",
+            "count": 327119
+        },
+        {
+            "source": "n12",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n4",
+            "count": 210016
+        },
+        {
+            "source": "n19",
+            "property": "http://www.w3.org/2002/07/owl#sameAs",
+            "target": "n1",
+            "count": 180636
+        },
+        {
+            "source": "n14",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n4",
+            "count": 136032
+        },
+        {
+            "source": "n14",
+            "property": "https://dblp.org/rdf/schema#editedBy",
+            "target": "n19",
+            "count": 127947
+        },
+        {
+            "source": "n12",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n19",
+            "count": 118585
+        },
+        {
+            "source": "n18",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n2",
+            "count": 112374
+        },
+        {
+            "source": "n18",
+            "property": "https://dblp.org/rdf/schema#wikidata",
+            "target": "n1",
+            "count": 112373
+        },
+        {
+            "source": "n19",
+            "property": "https://dblp.org/rdf/schema#orcid",
+            "target": "n1",
+            "count": 110431
+        },
+        {
+            "source": "n14",
+            "property": "http://www.w3.org/2002/07/owl#sameAs",
+            "target": "n1",
+            "count": 110282
+        },
+        {
+            "source": "n12",
+            "property": "https://dblp.org/rdf/schema#bibtexType",
+            "target": "n1",
+            "count": 108223
+        },
+        {
+            "source": "n12",
+            "property": "https://dblp.org/rdf/schema#orderedCreators",
+            "target": "n5",
+            "count": 108125
+        },
+        {
+            "source": "n16",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n19",
+            "count": 107030
+        },
+        {
+            "source": "n12",
+            "property": "https://dblp.org/rdf/schema#primaryElectronicEdition",
+            "target": "n1",
+            "count": 100001
+        },
+        {
+            "source": "n17",
+            "property": "http://www.w3.org/2002/07/owl#sameAs",
+            "target": "n1",
+            "count": 98583
+        },
+        {
+            "source": "n11",
+            "property": "https://dblp.org/rdf/schema#otherElectronicEdition",
+            "target": "n1",
+            "count": 95163
+        },
+        {
+            "source": "n17",
+            "property": "https://dblp.org/rdf/schema#doi",
+            "target": "n1",
+            "count": 89560
+        },
+        {
+            "source": "n16",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n4",
+            "count": 77881
+        },
+        {
+            "source": "n19",
+            "property": "https://dblp.org/rdf/schema#webpage",
+            "target": "n1",
+            "count": 77359
+        },
+        {
+            "source": "n16",
+            "property": "http://www.w3.org/2002/07/owl#sameAs",
+            "target": "n1",
+            "count": 74980
+        },
+        {
+            "source": "n16",
+            "property": "https://dblp.org/rdf/schema#doi",
+            "target": "n1",
+            "count": 73150
+        },
+        {
+            "source": "n19",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n2",
+            "count": 67486
+        },
+        {
+            "source": "n12",
+            "property": "https://dblp.org/rdf/schema#otherElectronicEdition",
+            "target": "n1",
+            "count": 63983
+        },
+        {
+            "source": "n17",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n10",
+            "count": 63615
+        },
+        {
+            "source": "n12",
+            "property": "http://www.w3.org/2002/07/owl#sameAs",
+            "target": "n1",
+            "count": 58090
+        },
+        {
+            "source": "n19",
+            "property": "https://dblp.org/rdf/schema#wikidata",
+            "target": "n1",
+            "count": 55152
+        },
+        {
+            "source": "n14",
+            "property": "https://dblp.org/rdf/schema#doi",
+            "target": "n1",
+            "count": 54238
+        },
+        {
+            "source": "n14",
+            "property": "https://dblp.org/rdf/schema#bibtexType",
+            "target": "n1",
+            "count": 53967
+        },
+        {
+            "source": "n14",
+            "property": "https://dblp.org/rdf/schema#listedOnTocPage",
+            "target": "n1",
+            "count": 53844
+        },
+        {
+            "source": "n20",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n4",
+            "count": 52507
+        },
+        {
+            "source": "n14",
+            "property": "https://dblp.org/rdf/schema#isbn",
+            "target": "n1",
+            "count": 52182
+        },
+        {
+            "source": "n20",
+            "property": "http://www.w3.org/2002/07/owl#sameAs",
+            "target": "n1",
+            "count": 50660
+        },
+        {
+            "source": "n20",
+            "property": "https://dblp.org/rdf/schema#doi",
+            "target": "n1",
+            "count": 50372
+        },
+        {
+            "source": "n14",
+            "property": "https://dblp.org/rdf/schema#primaryElectronicEdition",
+            "target": "n1",
+            "count": 47840
+        },
+        {
+            "source": "n19",
+            "property": "https://dblp.org/rdf/schema#primaryHomepage",
+            "target": "n1",
+            "count": 46448
+        },
+        {
+            "source": "n18",
+            "property": "https://dblp.org/rdf/schema#archivedElectronicEdition",
+            "target": "n1",
+            "count": 43220
+        },
+        {
+            "source": "n16",
+            "property": "https://dblp.org/rdf/schema#bibtexType",
+            "target": "n1",
+            "count": 41290
+        },
+        {
+            "source": "n16",
+            "property": "https://dblp.org/rdf/schema#listedOnTocPage",
+            "target": "n1",
+            "count": 41290
+        },
+        {
+            "source": "n16",
+            "property": "https://dblp.org/rdf/schema#orderedCreators",
+            "target": "n5",
+            "count": 41099
+        },
+        {
+            "source": "n14",
+            "property": "https://dblp.org/rdf/schema#orderedCreators",
+            "target": "n5",
+            "count": 41096
+        },
+        {
+            "source": "n16",
+            "property": "https://dblp.org/rdf/schema#publishedAsPartOf",
+            "target": "n14",
+            "count": 41017
+        },
+        {
+            "source": "n16",
+            "property": "https://dblp.org/rdf/schema#primaryElectronicEdition",
+            "target": "n1",
+            "count": 38009
+        },
+        {
+            "source": "n20",
+            "property": "https://dblp.org/rdf/schema#bibtexType",
+            "target": "n1",
+            "count": 27321
+        },
+        {
+            "source": "n20",
+            "property": "https://dblp.org/rdf/schema#listedOnTocPage",
+            "target": "n1",
+            "count": 27321
+        },
+        {
+            "source": "n20",
+            "property": "https://dblp.org/rdf/schema#primaryElectronicEdition",
+            "target": "n1",
+            "count": 27182
+        },
+        {
+            "source": "n12",
+            "property": "https://dblp.org/rdf/schema#isbn",
+            "target": "n1",
+            "count": 26864
+        },
+        {
+            "source": "n20",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n19",
+            "count": 26359
+        },
+        {
+            "source": "n20",
+            "property": "https://dblp.org/rdf/schema#publishedAsPartOf",
+            "target": "n14",
+            "count": 24944
+        },
+        {
+            "source": "n11",
+            "property": "https://dblp.org/rdf/schema#archivedElectronicEdition",
+            "target": "n1",
+            "count": 21726
+        },
+        {
+            "source": "n12",
+            "property": "https://dblp.org/rdf/schema#doi",
+            "target": "n1",
+            "count": 16852
+        },
+        {
+            "source": "n20",
+            "property": "https://dblp.org/rdf/schema#orderedCreators",
+            "target": "n5",
+            "count": 16713
+        },
+        {
+            "source": "n10",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n3",
+            "count": 11544
+        },
+        {
+            "source": "n14",
+            "property": "https://dblp.org/rdf/schema#otherElectronicEdition",
+            "target": "n1",
+            "count": 11485
+        },
+        {
+            "source": "n13",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n19",
+            "count": 10537
+        },
+        {
+            "source": "n21",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n4",
+            "count": 10034
+        },
+        {
+            "source": "n17",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n2",
+            "count": 9023
+        },
+        {
+            "source": "n17",
+            "property": "https://dblp.org/rdf/schema#wikidata",
+            "target": "n1",
+            "count": 9023
+        },
+        {
+            "source": "n19",
+            "property": "https://dblp.org/rdf/schema#wikipedia",
+            "target": "n1",
+            "count": 7180
+        },
+        {
+            "source": "n19",
+            "property": "https://dblp.org/rdf/schema#otherHomepage",
+            "target": "n1",
+            "count": 6416
+        },
+        {
+            "source": "n13",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n4",
+            "count": 6020
+        },
+        {
+            "source": "n13",
+            "property": "http://www.w3.org/2002/07/owl#sameAs",
+            "target": "n1",
+            "count": 5630
+        },
+        {
+            "source": "n13",
+            "property": "https://dblp.org/rdf/schema#doi",
+            "target": "n1",
+            "count": 5346
+        },
+        {
+            "source": "n21",
+            "property": "https://dblp.org/rdf/schema#bibtexType",
+            "target": "n1",
+            "count": 5273
+        },
+        {
+            "source": "n21",
+            "property": "https://dblp.org/rdf/schema#listedOnTocPage",
+            "target": "n1",
+            "count": 5271
+        },
+        {
+            "source": "n21",
+            "property": "https://dblp.org/rdf/schema#primaryElectronicEdition",
+            "target": "n1",
+            "count": 5251
+        },
+        {
+            "source": "n21",
+            "property": "http://www.w3.org/2002/07/owl#sameAs",
+            "target": "n1",
+            "count": 4987
+        },
+        {
+            "source": "n21",
+            "property": "https://dblp.org/rdf/schema#doi",
+            "target": "n1",
+            "count": 4878
+        },
+        {
+            "source": "n17",
+            "property": "https://dblp.org/rdf/schema#publishedAsPartOf",
+            "target": "n14",
+            "count": 3902
+        },
+        {
+            "source": "n13",
+            "property": "https://dblp.org/rdf/schema#bibtexType",
+            "target": "n1",
+            "count": 3347
+        },
+        {
+            "source": "n13",
+            "property": "https://dblp.org/rdf/schema#listedOnTocPage",
+            "target": "n1",
+            "count": 3347
+        },
+        {
+            "source": "n13",
+            "property": "https://dblp.org/rdf/schema#orderedCreators",
+            "target": "n5",
+            "count": 3347
+        },
+        {
+            "source": "n13",
+            "property": "https://dblp.org/rdf/schema#primaryElectronicEdition",
+            "target": "n1",
+            "count": 3347
+        },
+        {
+            "source": "n11",
+            "property": "https://dblp.org/rdf/schema#publishedAsPartOf",
+            "target": "n14",
+            "count": 2156
+        },
+        {
+            "source": "n16",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n2",
+            "count": 1814
+        },
+        {
+            "source": "n16",
+            "property": "https://dblp.org/rdf/schema#wikidata",
+            "target": "n1",
+            "count": 1814
+        },
+        {
+            "source": "n14",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n2",
+            "count": 1635
+        },
+        {
+            "source": "n14",
+            "property": "https://dblp.org/rdf/schema#wikidata",
+            "target": "n1",
+            "count": 1634
+        },
+        {
+            "source": "n14",
+            "property": "https://dblp.org/rdf/schema#editedBy",
+            "target": "n10",
+            "count": 1480
+        },
+        {
+            "source": "n16",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n10",
+            "count": 1317
+        },
+        {
+            "source": "n19",
+            "property": "http://www.w3.org/2002/07/owl#differentFrom",
+            "target": "n19",
+            "count": 1121
+        },
+        {
+            "source": "n12",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n10",
+            "count": 982
+        },
+        {
+            "source": "n21",
+            "property": "https://dblp.org/rdf/schema#publishedAsPartOf",
+            "target": "n14",
+            "count": 976
+        },
+        {
+            "source": "n5",
+            "property": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+            "target": "n15",
+            "count": 855
+        },
+        {
+            "source": "n19",
+            "property": "https://dblp.org/rdf/schema#archivedWebpage",
+            "target": "n1",
+            "count": 839
+        },
+        {
+            "source": "n11",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n15",
+            "count": 569
+        },
+        {
+            "source": "n21",
+            "property": "https://dblp.org/rdf/schema#otherElectronicEdition",
+            "target": "n1",
+            "count": 495
+        },
+        {
+            "source": "n19",
+            "property": "https://dblp.org/rdf/schema#awardWebpage",
+            "target": "n1",
+            "count": 472
+        },
+        {
+            "source": "n12",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n2",
+            "count": 359
+        },
+        {
+            "source": "n12",
+            "property": "https://dblp.org/rdf/schema#wikidata",
+            "target": "n1",
+            "count": 359
+        },
+        {
+            "source": "n20",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n10",
+            "count": 344
+        },
+        {
+            "source": "n21",
+            "property": "https://dblp.org/rdf/schema#publishedAsPartOf",
+            "target": "n21",
+            "count": 339
+        },
+        {
+            "source": "n15",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n3",
+            "count": 304
+        },
+        {
+            "source": "n20",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n2",
+            "count": 288
+        },
+        {
+            "source": "n20",
+            "property": "https://dblp.org/rdf/schema#wikidata",
+            "target": "n1",
+            "count": 288
+        },
+        {
+            "source": "n13",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n2",
+            "count": 284
+        },
+        {
+            "source": "n13",
+            "property": "https://dblp.org/rdf/schema#wikidata",
+            "target": "n1",
+            "count": 284
+        },
+        {
+            "source": "n14",
+            "property": "https://dblp.org/rdf/schema#archivedElectronicEdition",
+            "target": "n1",
+            "count": 275
+        },
+        {
+            "source": "n12",
+            "property": "https://dblp.org/rdf/schema#archivedElectronicEdition",
+            "target": "n1",
+            "count": 240
+        },
+        {
+            "source": "n12",
+            "property": "https://dblp.org/rdf/schema#listedOnTocPage",
+            "target": "n1",
+            "count": 190
+        },
+        {
+            "source": "n16",
+            "property": "https://dblp.org/rdf/schema#otherElectronicEdition",
+            "target": "n1",
+            "count": 154
+        },
+        {
+            "source": "n17",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n15",
+            "count": 147
+        },
+        {
+            "source": "n14",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n19",
+            "count": 126
+        },
+        {
+            "source": "n18",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n15",
+            "count": 125
+        },
+        {
+            "source": "n13",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n10",
+            "count": 116
+        },
+        {
+            "source": "n21",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n2",
+            "count": 105
+        },
+        {
+            "source": "n21",
+            "property": "https://dblp.org/rdf/schema#wikidata",
+            "target": "n1",
+            "count": 105
+        },
+        {
+            "source": "n14",
+            "property": "https://dblp.org/rdf/schema#publishedAsPartOf",
+            "target": "n14",
+            "count": 71
+        },
+        {
+            "source": "n6",
+            "property": "http://www.w3.org/2000/01/rdf-schema#domain",
+            "target": "n7",
+            "count": 57
+        },
+        {
+            "source": "n6",
+            "property": "http://www.w3.org/2002/07/owl#equivalentProperty",
+            "target": "n1",
+            "count": 47
+        },
+        {
+            "source": "n17",
+            "property": "https://dblp.org/rdf/schema#editedBy",
+            "target": "n19",
+            "count": 45
+        },
+        {
+            "source": "n6",
+            "property": "http://www.w3.org/2000/01/rdf-schema#range",
+            "target": "n1",
+            "count": 44
+        },
+        {
+            "source": "n16",
+            "property": "https://dblp.org/rdf/schema#publishedAsPartOf",
+            "target": "n12",
+            "count": 33
+        },
+        {
+            "source": "n6",
+            "property": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+            "target": "n1",
+            "count": 30
+        },
+        {
+            "source": "n6",
+            "property": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+            "target": "n6",
+            "count": 29
+        },
+        {
+            "source": "n18",
+            "property": "https://dblp.org/rdf/schema#editedBy",
+            "target": "n19",
+            "count": 24
+        },
+        {
+            "source": "n7",
+            "property": "http://www.w3.org/2002/07/owl#equivalentClass",
+            "target": "n1",
+            "count": 22
+        },
+        {
+            "source": "n18",
+            "property": "https://dblp.org/rdf/schema#publishedAsPartOf",
+            "target": "n17",
+            "count": 22
+        },
+        {
+            "source": "n17",
+            "property": "https://dblp.org/rdf/schema#otherElectronicEdition",
+            "target": "n1",
+            "count": 21
+        },
+        {
+            "source": "n11",
+            "property": "https://dblp.org/rdf/schema#editedBy",
+            "target": "n19",
+            "count": 20
+        },
+        {
+            "source": "n21",
+            "property": "https://dblp.org/rdf/schema#archivedElectronicEdition",
+            "target": "n1",
+            "count": 18
+        },
+        {
+            "source": "n15",
+            "property": "https://dblp.org/rdf/schema#primaryHomepage",
+            "target": "n1",
+            "count": 16
+        },
+        {
+            "source": "n15",
+            "property": "http://www.w3.org/2002/07/owl#sameAs",
+            "target": "n1",
+            "count": 15
+        },
+        {
+            "source": "n18",
+            "property": "https://dblp.org/rdf/schema#publishedAsPartOf",
+            "target": "n21",
+            "count": 15
+        },
+        {
+            "source": "n15",
+            "property": "http://purl.org/spar/datacite/hasIdentifier",
+            "target": "n2",
+            "count": 13
+        },
+        {
+            "source": "n6",
+            "property": "http://www.w3.org/2000/01/rdf-schema#range",
+            "target": "n7",
+            "count": 13
+        },
+        {
+            "source": "n15",
+            "property": "https://dblp.org/rdf/schema#wikidata",
+            "target": "n1",
+            "count": 11
+        },
+        {
+            "source": "n19",
+            "property": "http://www.w3.org/2002/07/owl#differentFrom",
+            "target": "n1",
+            "count": 9
+        },
+        {
+            "source": "n17",
+            "property": "https://dblp.org/rdf/schema#archivedElectronicEdition",
+            "target": "n1",
+            "count": 9
+        },
+        {
+            "source": "n6",
+            "property": "http://www.w3.org/2002/07/owl#inverseOf",
+            "target": "n6",
+            "count": 8
+        },
+        {
+            "source": "n12",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n15",
+            "count": 6
+        },
+        {
+            "source": "n15",
+            "property": "https://dblp.org/rdf/schema#wikipedia",
+            "target": "n1",
+            "count": 5
+        },
+        {
+            "source": "n8",
+            "property": "http://www.w3.org/2000/01/rdf-schema#domain",
+            "target": "n7",
+            "count": 4
+        },
+        {
+            "source": "n8",
+            "property": "http://www.w3.org/2000/01/rdf-schema#range",
+            "target": "n7",
+            "count": 4
+        },
+        {
+            "source": "n6",
+            "property": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+            "target": "n8",
+            "count": 4
+        },
+        {
+            "source": "n13",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n15",
+            "count": 4
+        },
+        {
+            "source": "n14",
+            "property": "https://dblp.org/rdf/schema#editedBy",
+            "target": "n15",
+            "count": 3
+        },
+        {
+            "source": "n15",
+            "property": "https://dblp.org/rdf/schema#webpage",
+            "target": "n1",
+            "count": 3
+        },
+        {
+            "source": "n8",
+            "property": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+            "target": "n6",
+            "count": 2
+        },
+        {
+            "source": "n8",
+            "property": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+            "target": "n8",
+            "count": 2
+        },
+        {
+            "source": "n9",
+            "property": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+            "target": "n1",
+            "count": 2
+        },
+        {
+            "source": "n21",
+            "property": "https://dblp.org/rdf/schema#isbn",
+            "target": "n1",
+            "count": 2
+        },
+        {
+            "source": "n15",
+            "property": "https://dblp.org/rdf/schema#otherHomepage",
+            "target": "n1",
+            "count": 2
+        },
+        {
+            "source": "n1",
+            "property": "http://purl.org/dc/terms/creator",
+            "target": "n1",
+            "count": 1
+        },
+        {
+            "source": "n1",
+            "property": "http://purl.org/dc/terms/license",
+            "target": "n1",
+            "count": 1
+        },
+        {
+            "source": "n9",
+            "property": "http://www.w3.org/2000/01/rdf-schema#domain",
+            "target": "n7",
+            "count": 1
+        },
+        {
+            "source": "n9",
+            "property": "http://www.w3.org/2000/01/rdf-schema#range",
+            "target": "n7",
+            "count": 1
+        },
+        {
+            "source": "n8",
+            "property": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+            "target": "n1",
+            "count": 1
+        },
+        {
+            "source": "n16",
+            "property": "https://dblp.org/rdf/schema#archivedElectronicEdition",
+            "target": "n1",
+            "count": 1
+        },
+        {
+            "source": "n14",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n10",
+            "count": 1
+        },
+        {
+            "source": "n16",
+            "property": "https://dblp.org/rdf/schema#authoredBy",
+            "target": "n15",
+            "count": 1
+        }
+    ],
+    "attributes": [
+        {
+            "node": "n4",
+            "property": "http://purl.org/spar/literal/hasLiteralValue",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 11864736
+        },
+        {
+            "node": "n3",
+            "property": "http://purl.org/spar/literal/hasLiteralValue",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3225547
+        },
+        {
+            "node": "n18",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3074098
+        },
+        {
+            "node": "n18",
+            "property": "https://dblp.org/rdf/schema#numberOfCreators",
+            "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+            "count": 3074098
+        },
+        {
+            "node": "n18",
+            "property": "https://dblp.org/rdf/schema#publishedIn",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3074098
+        },
+        {
+            "node": "n18",
+            "property": "https://dblp.org/rdf/schema#publishedInBook",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3074098
+        },
+        {
+            "node": "n18",
+            "property": "https://dblp.org/rdf/schema#title",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3074098
+        },
+        {
+            "node": "n18",
+            "property": "https://dblp.org/rdf/schema#yearOfEvent",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3074098
+        },
+        {
+            "node": "n18",
+            "property": "https://dblp.org/rdf/schema#yearOfPublication",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3073499
+        },
+        {
+            "node": "n19",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3036888
+        },
+        {
+            "node": "n19",
+            "property": "https://dblp.org/rdf/schema#primaryFullCreatorName",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3036888
+        },
+        {
+            "node": "n18",
+            "property": "https://dblp.org/rdf/schema#pagination",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2921069
+        },
+        {
+            "node": "n11",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2440347
+        },
+        {
+            "node": "n11",
+            "property": "https://dblp.org/rdf/schema#numberOfCreators",
+            "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+            "count": 2440347
+        },
+        {
+            "node": "n11",
+            "property": "https://dblp.org/rdf/schema#title",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2440347
+        },
+        {
+            "node": "n11",
+            "property": "https://dblp.org/rdf/schema#yearOfPublication",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2440347
+        },
+        {
+            "node": "n11",
+            "property": "https://dblp.org/rdf/schema#publishedIn",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2440345
+        },
+        {
+            "node": "n11",
+            "property": "https://dblp.org/rdf/schema#publishedInJournal",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2440345
+        },
+        {
+            "node": "n11",
+            "property": "https://dblp.org/rdf/schema#publishedInJournalVolume",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2440287
+        },
+        {
+            "node": "n11",
+            "property": "https://dblp.org/rdf/schema#pagination",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2349743
+        },
+        {
+            "node": "n11",
+            "property": "https://dblp.org/rdf/schema#publishedInJournalVolumeIssue",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2014936
+        },
+        {
+            "node": "n2",
+            "property": "http://purl.org/spar/literal/hasLiteralValue",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 557630
+        },
+        {
+            "node": "n17",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 476780
+        },
+        {
+            "node": "n17",
+            "property": "https://dblp.org/rdf/schema#numberOfCreators",
+            "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+            "count": 476780
+        },
+        {
+            "node": "n17",
+            "property": "https://dblp.org/rdf/schema#title",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 476780
+        },
+        {
+            "node": "n17",
+            "property": "https://dblp.org/rdf/schema#publishedIn",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 476746
+        },
+        {
+            "node": "n17",
+            "property": "https://dblp.org/rdf/schema#yearOfPublication",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 476709
+        },
+        {
+            "node": "n17",
+            "property": "https://dblp.org/rdf/schema#publishedInJournal",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 472774
+        },
+        {
+            "node": "n17",
+            "property": "https://dblp.org/rdf/schema#publishedInJournalVolume",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 472305
+        },
+        {
+            "node": "n19",
+            "property": "https://dblp.org/rdf/schema#primaryAffiliation",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 115777
+        },
+        {
+            "node": "n12",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 108223
+        },
+        {
+            "node": "n12",
+            "property": "https://dblp.org/rdf/schema#numberOfCreators",
+            "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+            "count": 108223
+        },
+        {
+            "node": "n12",
+            "property": "https://dblp.org/rdf/schema#title",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 108223
+        },
+        {
+            "node": "n12",
+            "property": "https://dblp.org/rdf/schema#yearOfPublication",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 108223
+        },
+        {
+            "node": "n12",
+            "property": "https://dblp.org/rdf/schema#thesisAcceptedBySchool",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 91020
+        },
+        {
+            "node": "n19",
+            "property": "https://dblp.org/rdf/schema#otherFullCreatorName",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 80715
+        },
+        {
+            "node": "n14",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 53967
+        },
+        {
+            "node": "n14",
+            "property": "https://dblp.org/rdf/schema#numberOfCreators",
+            "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+            "count": 53967
+        },
+        {
+            "node": "n14",
+            "property": "https://dblp.org/rdf/schema#title",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 53967
+        },
+        {
+            "node": "n14",
+            "property": "https://dblp.org/rdf/schema#yearOfPublication",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 53967
+        },
+        {
+            "node": "n14",
+            "property": "https://dblp.org/rdf/schema#publishedBy",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 52246
+        },
+        {
+            "node": "n16",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 41290
+        },
+        {
+            "node": "n16",
+            "property": "https://dblp.org/rdf/schema#numberOfCreators",
+            "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+            "count": 41290
+        },
+        {
+            "node": "n16",
+            "property": "https://dblp.org/rdf/schema#publishedIn",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 41290
+        },
+        {
+            "node": "n16",
+            "property": "https://dblp.org/rdf/schema#publishedInBook",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 41290
+        },
+        {
+            "node": "n16",
+            "property": "https://dblp.org/rdf/schema#title",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 41290
+        },
+        {
+            "node": "n16",
+            "property": "https://dblp.org/rdf/schema#yearOfPublication",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 41290
+        },
+        {
+            "node": "n16",
+            "property": "https://dblp.org/rdf/schema#pagination",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 40355
+        },
+        {
+            "node": "n12",
+            "property": "https://dblp.org/rdf/schema#publicationNote",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 35622
+        },
+        {
+            "node": "n19",
+            "property": "https://dblp.org/rdf/schema#otherAffiliation",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 34657
+        },
+        {
+            "node": "n12",
+            "property": "https://dblp.org/rdf/schema#pagination",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 33294
+        },
+        {
+            "node": "n17",
+            "property": "https://dblp.org/rdf/schema#pagination",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 31085
+        },
+        {
+            "node": "n20",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 27321
+        },
+        {
+            "node": "n20",
+            "property": "https://dblp.org/rdf/schema#numberOfCreators",
+            "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+            "count": 27321
+        },
+        {
+            "node": "n20",
+            "property": "https://dblp.org/rdf/schema#publishedIn",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 27321
+        },
+        {
+            "node": "n20",
+            "property": "https://dblp.org/rdf/schema#title",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 27321
+        },
+        {
+            "node": "n20",
+            "property": "https://dblp.org/rdf/schema#yearOfPublication",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 27321
+        },
+        {
+            "node": "n20",
+            "property": "https://dblp.org/rdf/schema#publishedInBook",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 27320
+        },
+        {
+            "node": "n14",
+            "property": "https://dblp.org/rdf/schema#publishedIn",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 24379
+        },
+        {
+            "node": "n14",
+            "property": "https://dblp.org/rdf/schema#publishedInSeries",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 24310
+        },
+        {
+            "node": "n14",
+            "property": "https://dblp.org/rdf/schema#publishedInSeriesVolume",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 23567
+        },
+        {
+            "node": "n12",
+            "property": "https://dblp.org/rdf/schema#publishedBy",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 23245
+        },
+        {
+            "node": "n20",
+            "property": "https://dblp.org/rdf/schema#pagination",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 20559
+        },
+        {
+            "node": "n10",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 11544
+        },
+        {
+            "node": "n10",
+            "property": "https://dblp.org/rdf/schema#primaryFullCreatorName",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 11544
+        },
+        {
+            "node": "n17",
+            "property": "https://dblp.org/rdf/schema#monthOfPublication",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 9095
+        },
+        {
+            "node": "n12",
+            "property": "https://dblp.org/rdf/schema#publishedIn",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 7314
+        },
+        {
+            "node": "n12",
+            "property": "https://dblp.org/rdf/schema#publishedInSeries",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 7314
+        },
+        {
+            "node": "n21",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 5273
+        },
+        {
+            "node": "n21",
+            "property": "https://dblp.org/rdf/schema#numberOfCreators",
+            "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+            "count": 5273
+        },
+        {
+            "node": "n21",
+            "property": "https://dblp.org/rdf/schema#title",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 5273
+        },
+        {
+            "node": "n21",
+            "property": "https://dblp.org/rdf/schema#yearOfPublication",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 5273
+        },
+        {
+            "node": "n21",
+            "property": "https://dblp.org/rdf/schema#publishedIn",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 5271
+        },
+        {
+            "node": "n17",
+            "property": "https://dblp.org/rdf/schema#publishedInJournalVolumeIssue",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3976
+        },
+        {
+            "node": "n17",
+            "property": "https://dblp.org/rdf/schema#publishedInBook",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3970
+        },
+        {
+            "node": "n17",
+            "property": "https://dblp.org/rdf/schema#yearOfEvent",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3963
+        },
+        {
+            "node": "n21",
+            "property": "https://dblp.org/rdf/schema#publishedInJournal",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3957
+        },
+        {
+            "node": "n21",
+            "property": "https://dblp.org/rdf/schema#publishedInJournalVolume",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3957
+        },
+        {
+            "node": "n13",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3347
+        },
+        {
+            "node": "n13",
+            "property": "https://dblp.org/rdf/schema#numberOfCreators",
+            "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+            "count": 3347
+        },
+        {
+            "node": "n13",
+            "property": "https://dblp.org/rdf/schema#publishedIn",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3347
+        },
+        {
+            "node": "n13",
+            "property": "https://dblp.org/rdf/schema#publishedInJournal",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3347
+        },
+        {
+            "node": "n13",
+            "property": "https://dblp.org/rdf/schema#publishedInJournalVolume",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3347
+        },
+        {
+            "node": "n13",
+            "property": "https://dblp.org/rdf/schema#title",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3347
+        },
+        {
+            "node": "n13",
+            "property": "https://dblp.org/rdf/schema#yearOfPublication",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3347
+        },
+        {
+            "node": "n12",
+            "property": "https://dblp.org/rdf/schema#publishedInSeriesVolume",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2996
+        },
+        {
+            "node": "n10",
+            "property": "https://dblp.org/rdf/schema#otherFullCreatorName",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2950
+        },
+        {
+            "node": "n21",
+            "property": "https://dblp.org/rdf/schema#pagination",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2870
+        },
+        {
+            "node": "n13",
+            "property": "https://dblp.org/rdf/schema#pagination",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2666
+        },
+        {
+            "node": "n11",
+            "property": "https://dblp.org/rdf/schema#monthOfPublication",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2446
+        },
+        {
+            "node": "n13",
+            "property": "https://dblp.org/rdf/schema#publishedInJournalVolumeIssue",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2168
+        },
+        {
+            "node": "n19",
+            "property": "https://dblp.org/rdf/schema#creatorNote",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 1737
+        },
+        {
+            "node": "n21",
+            "property": "https://dblp.org/rdf/schema#publishedInBook",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 1312
+        },
+        {
+            "node": "n21",
+            "property": "https://dblp.org/rdf/schema#yearOfEvent",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 1308
+        },
+        {
+            "node": "n11",
+            "property": "https://dblp.org/rdf/schema#publicationNote",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 1169
+        },
+        {
+            "node": "n21",
+            "property": "https://dblp.org/rdf/schema#publishedInJournalVolumeIssue",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 928
+        },
+        {
+            "node": "n18",
+            "property": "https://dblp.org/rdf/schema#publicationNote",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 323
+        },
+        {
+            "node": "n15",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 300
+        },
+        {
+            "node": "n15",
+            "property": "https://dblp.org/rdf/schema#primaryFullCreatorName",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 300
+        },
+        {
+            "node": "n14",
+            "property": "https://dblp.org/rdf/schema#publicationNote",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 294
+        },
+        {
+            "node": "n17",
+            "property": "https://dblp.org/rdf/schema#publishedBy",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 229
+        },
+        {
+            "node": "n17",
+            "property": "https://dblp.org/rdf/schema#publicationNote",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 149
+        },
+        {
+            "node": "n14",
+            "property": "https://dblp.org/rdf/schema#pagination",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 111
+        },
+        {
+            "node": "n13",
+            "property": "https://dblp.org/rdf/schema#publicationNote",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 109
+        },
+        {
+            "node": "n16",
+            "property": "https://dblp.org/rdf/schema#publishedBy",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 91
+        },
+        {
+            "node": "n14",
+            "property": "https://dblp.org/rdf/schema#publishedInJournal",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 69
+        },
+        {
+            "node": "n14",
+            "property": "https://dblp.org/rdf/schema#publishedInJournalVolume",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 69
+        },
+        {
+            "node": "n14",
+            "property": "https://dblp.org/rdf/schema#publishedInJournalVolumeIssue",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 64
+        },
+        {
+            "node": "n6",
+            "property": "http://www.w3.org/2000/01/rdf-schema#comment",
+            "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+            "count": 57
+        },
+        {
+            "node": "n6",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+            "count": 57
+        },
+        {
+            "node": "n16",
+            "property": "https://dblp.org/rdf/schema#publicationNote",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 22
+        },
+        {
+            "node": "n18",
+            "property": "https://dblp.org/rdf/schema#publishedInSeriesVolume",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 21
+        },
+        {
+            "node": "n7",
+            "property": "http://www.w3.org/2000/01/rdf-schema#comment",
+            "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+            "count": 15
+        },
+        {
+            "node": "n7",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+            "count": 15
+        },
+        {
+            "node": "n17",
+            "property": "https://dblp.org/rdf/schema#thesisAcceptedBySchool",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 15
+        },
+        {
+            "node": "n8",
+            "property": "http://www.w3.org/2000/01/rdf-schema#comment",
+            "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+            "count": 4
+        },
+        {
+            "node": "n8",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+            "count": 4
+        },
+        {
+            "node": "n15",
+            "property": "https://dblp.org/rdf/schema#creatorNote",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 4
+        },
+        {
+            "node": "n12",
+            "property": "https://dblp.org/rdf/schema#monthOfPublication",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3
+        },
+        {
+            "node": "n15",
+            "property": "https://dblp.org/rdf/schema#otherFullCreatorName",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3
+        },
+        {
+            "node": "n15",
+            "property": "https://dblp.org/rdf/schema#primaryAffiliation",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3
+        },
+        {
+            "node": "n21",
+            "property": "https://dblp.org/rdf/schema#publishedBy",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3
+        },
+        {
+            "node": "n14",
+            "property": "https://dblp.org/rdf/schema#publishersAddress",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 3
+        },
+        {
+            "node": "n16",
+            "property": "https://dblp.org/rdf/schema#publishedInBookChapter",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2
+        },
+        {
+            "node": "n17",
+            "property": "https://dblp.org/rdf/schema#publishedInSeries",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2
+        },
+        {
+            "node": "n21",
+            "property": "https://dblp.org/rdf/schema#publishedInSeries",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2
+        },
+        {
+            "node": "n21",
+            "property": "https://dblp.org/rdf/schema#publishedInSeriesVolume",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 2
+        },
+        {
+            "node": "n1",
+            "property": "http://purl.org/dc/terms/modified",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 1
+        },
+        {
+            "node": "n9",
+            "property": "http://www.w3.org/2000/01/rdf-schema#comment",
+            "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+            "count": 1
+        },
+        {
+            "node": "n1",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 1
+        },
+        {
+            "node": "n9",
+            "property": "http://www.w3.org/2000/01/rdf-schema#label",
+            "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString",
+            "count": 1
+        },
+        {
+            "node": "n14",
+            "property": "https://dblp.org/rdf/schema#monthOfPublication",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 1
+        },
+        {
+            "node": "n18",
+            "property": "https://dblp.org/rdf/schema#monthOfPublication",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 1
+        },
+        {
+            "node": "n20",
+            "property": "https://dblp.org/rdf/schema#publishedInJournal",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 1
+        },
+        {
+            "node": "n20",
+            "property": "https://dblp.org/rdf/schema#publishedInJournalVolume",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 1
+        },
+        {
+            "node": "n20",
+            "property": "https://dblp.org/rdf/schema#publishedInJournalVolumeIssue",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 1
+        },
+        {
+            "node": "n17",
+            "property": "https://dblp.org/rdf/schema#publishedInSeriesVolume",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 1
+        },
+        {
+            "node": "n21",
+            "property": "https://dblp.org/rdf/schema#thesisAcceptedBySchool",
+            "datatype": "http://www.w3.org/2001/XMLSchema#string",
+            "count": 1
+        }
+    ]
+}
